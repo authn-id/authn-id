@@ -4,9 +4,9 @@ This is an official npm starter turborepo.
 
 ## What's inside?
 
-This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It includes the following packages/apps:
+This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It includes the following packages/examples:
 
-### Apps and Packages
+### Examples and Packages
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
