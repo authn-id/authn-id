@@ -1,6 +1,6 @@
 {
   "name": "@authn-id/browser",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Simple authentication library",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
