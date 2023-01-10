@@ -2,8 +2,8 @@
   "name": "@authn-id/browser",
   "version": "0.0.1",
   "description": "Simple authentication library",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "src/index.ts",
+  "types": "src/index.js",
   "files": [
     "dist"
   ],
@@ -29,14 +29,24 @@
     "passwordless"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs --dts",
+    "build": "tsup src/index.ts --dts",
     "dev": "npm run build --watch",
-    "lint": "TIMING=1 eslint \"**/*.ts*\""
+    "lint": "TIMING=1 eslint \"**/*.ts*\"",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
   },
+  "clean-package": "../../clean-package.config.json",
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
     "tsconfig": "*",
     "typescript": "^4.5.2"
+  },
+  "tsup": {
+    "clean": true,
+    "format": [
+      "cjs",
+      "esm"
+    ]
   }
 }
