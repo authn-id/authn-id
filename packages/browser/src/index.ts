@@ -1,3 +1,1 @@
-export default function helloWorld() {
-  console.log("Hello world");
-}
+export * from "./authenticate";
