@@ -1,6 +1,6 @@
 {
   "name": "@authn-id/browser",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple authentication library",
   "main": "src/index.ts",
   "types": "src/index.js",
@@ -46,7 +46,10 @@
     "clean": true,
     "format": [
       "cjs",
-      "esm"
-    ]
+      "esm",
+      "iife"
+    ],
+    "globalName": "AuthnId",
+    "minify": true
   }
 }
