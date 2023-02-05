@@ -14,6 +14,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@simplewebauthn/typescript-types": "^7.0.0",
     "clean-package": "^2.2.0",
     "eslint-config-custom": "*",
     "prettier": "latest",
@@ -23,5 +24,9 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "packageManager": "npm@8.3.1"
+  "packageManager": "npm@8.3.1",
+  "dependencies": {
+    "@simplewebauthn/browser": "^7.0.0",
+    "graphql-ws": "^5.11.3"
+  }
 }
