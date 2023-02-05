@@ -1,5 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Browser",
-  "extends": "./base.json"
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["DOM"]
+  }
 }
