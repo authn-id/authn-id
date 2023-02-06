@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   experimental: {
-    transpilePackages: ["ui", "browser"],
+    transpilePackages: ["browser"],
   },
 };
