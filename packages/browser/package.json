@@ -1,6 +1,6 @@
 {
   "name": "@authn-id/browser",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple MFA and passwordless signin library",
   "main": "src/index.ts",
   "types": "src/index.js",
