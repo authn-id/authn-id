@@ -21,6 +21,26 @@ export type FetchOptions = {
   body?: Record<string, any>;
 };
 
+export interface VerifyEmailTokenResponse {
+  success: boolean;
+  timestamp?: string;
+  expiresAt?: string;
+  source?: string;
+  email?: string;
+  device?: string;
+  country?: string;
+}
+
+export interface VerifyAuthenticationTokenResponse {
+  success: boolean;
+  timestamp?: string;
+  expiresAt?: string;
+  source?: string;
+  userId?: string;
+  username?: string;
+  email?: string;
+}
+
 export interface VerifyEmailResponse {
   approved: boolean | null;
   token?: string;
