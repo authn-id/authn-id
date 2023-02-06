@@ -20,13 +20,14 @@ You can verify an email for multi-factor authentication, user registration or pa
 #### 1. Send a verification link (frontend)
 
 ```js
-const authnid = new AuthnId.Client({ apiKey: API_KEY });
+const authnId = new AuthnId.Client({ apiKey: API_KEY });
 
 const email = "johndoe@authn.id";
-const { approved, token } = await authnid.verifyEmail(email);
+const { approved, token } = await authnId.verifyEmail(email);
 
 if (approved) {
-  const verified = await fetch(`/your-backend/verifyEmail?token=${token}`);
+  const response = await fetch(`/your-backend/verifyEmail?token=${token}`);
+  const verified = await response.json();
   if (verified.success) {
     // Success!
   }
@@ -38,7 +39,7 @@ if (approved) {
 ```js
 const { token } = req.query;
 
-const response = await fetch(apiurl + "/verify/token", {
+const response = await fetch(apiUrl + "/verify/token", {
   method: "POST",
   body: token,
   headers: { "x-authnid-api-secret": API_SECRET, "Content-Type": "text/plain" },
@@ -69,7 +70,7 @@ const body = {
   displayName: "John Doe",
 };
 
-const response = await fetch(apiurl + "/register/authenticator", {
+const response = await fetch(apiUrl + "/register/authenticator", {
   method: "POST",
   body: JSON.stringify(body),
   headers: {
@@ -84,13 +85,13 @@ const token = await response.text();
 #### 2. Initiate the registration (frontend)
 
 ```js
-const authnid = new AuthnId.Client({ apiKey: API_KEY });
+const authnId = new AuthnId.Client({ apiKey: API_KEY });
 
-const response = await fetch("/your-backend/register/authenticator");
+const response = await fetch("/your-backend/registerAuthenticator");
 const token = await response.text();
 
 try {
-  await authnid.registerAuthenticator(token);
+  await authnId.registerAuthenticator(token);
   // Success!
 } catch (e) {
   // Error
@@ -102,12 +103,13 @@ try {
 #### 1. Start the authentication (frontend)
 
 ```js
-const authnid = new AuthnId.Client({ apiKey: API_KEY });
+const authnId = new AuthnId.Client({ apiKey: API_KEY });
 
 const username = "johndoe@authn.id";
-const token = await authnid.authenticate(username);
+const token = await authnId.authenticate(username);
 
-const authenticated = await fetch(`/your-backend/verifyUser?token=${token}`);
+const response = await fetch(`/your-backend/verifyUser?token=${token}`);
+const authenticated = await response.json();
 if (authenticated.success) {
   // Success!
 }
@@ -118,7 +120,7 @@ if (authenticated.success) {
 ```js
 const { token } = req.query;
 
-const response = await fetch(apiurl + "/verify/token", {
+const response = await fetch(apiUrl + "/verify/token", {
   method: "POST",
   body: token,
   headers: { "x-authnid-api-secret": API_SECRET, "Content-Type": "text/plain" },
