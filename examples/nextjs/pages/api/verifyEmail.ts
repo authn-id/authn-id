@@ -7,7 +7,7 @@ export default async function handler(
 ) {
   try {
     const API_SECRET = process.env.AUTHNID_API_SECRET || "<your-api-secret>";
-    const apiUrl = "https://api.authnid.dev/v1";
+    const apiUrl = "https://api.authn.id/v1";
 
     const { token } = req.query as { token: string };
 

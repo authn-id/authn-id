@@ -143,5 +143,5 @@ import AuthnId from "@authn-id/browser";
 #### Backend
 
 ```js
-const apiUrl = "https://api.authnid.dev/v1";
+const apiUrl = "https://api.authn.id/v1";
 ```
