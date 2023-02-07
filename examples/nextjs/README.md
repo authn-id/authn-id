@@ -7,3 +7,5 @@
 ```
 npm run dev -w example/nextjs
 ```
+
+**Try online**: You can test this demo live at [https://demo-nextjs.authn.id](https://demo-nextjs.authn.id).
