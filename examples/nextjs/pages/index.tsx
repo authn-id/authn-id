@@ -9,9 +9,10 @@ export default function DemoWeb() {
 
   return (
     <div>
+      <h2>Authn.id with Next.js</h2>
       <p>
-        To run this example you must set your API key to <b>API_KEY</b> in
-        pages/index.tsx and set your API Secret to <b>API_SECRET</b> in
+        To run this example you must set your <b>API key</b> to API_KEY in
+        pages/index.tsx and set your <b>API Secret</b> to API_SECRET in
         pages/api/*.ts files.
       </p>
       <EmailVerification apiKey={API_KEY} />
