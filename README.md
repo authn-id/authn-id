@@ -5,6 +5,8 @@ This library allows you to easily add **multi-factor authentication** (MFA) or *
 - You can simply add an email verification
 - You can simply add MFA using fingerprint, Face ID or PIN powered by WebAuthn
 
+[Read the Authn.id documentation](https://docs.authn.id/docs/get-started/firststep)
+
 ## Installation
 
 Frontend
@@ -16,6 +18,8 @@ npm install @authn-id/browser
 ## Email Verification
 
 You can verify an email for multi-factor authentication, user registration or passwordless login.
+
+<img width="717" alt="email_verification" src="https://user-images.githubusercontent.com/2793221/218387075-fd9085e5-1cca-4703-b19f-6144f43d8d45.png">
 
 #### 1. Send a verification link (frontend)
 
@@ -61,6 +65,8 @@ You can verify a user with platform authenticator for MFA or passwordless signin
 
 ### Registration
 
+<img width="712" alt="webauthn_registration" src="https://user-images.githubusercontent.com/2793221/218387212-246ccfd3-cf3f-431b-83d2-716246407bae.png">
+
 #### 1. Retrieve a registration token (backend)
 
 ```js
@@ -99,6 +105,8 @@ try {
 ```
 
 ### Authentication
+
+<img width="721" alt="webauthn_authentication" src="https://user-images.githubusercontent.com/2793221/218387236-4d9c7844-d763-4175-b298-40edb9670624.png">
 
 #### 1. Start the authentication (frontend)
 
