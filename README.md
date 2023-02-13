@@ -9,11 +9,22 @@ This library allows you to easily add **multi-factor authentication** (MFA) or *
 
 ## Installation
 
-Frontend
+#### Frontend
 
-```
+```bash
 npm install @authn-id/browser
 ```
+
+```js
+import AuthnId from "@authn-id/browser";
+```
+
+#### Backend
+
+```js
+const apiUrl = "https://api.authn.id/v1";
+```
+
 
 ## Email Verification
 
@@ -138,18 +149,4 @@ var result = await response.json();
 if (result.success) {
   // Success!
 }
-```
-
-## Common
-
-#### Frontend
-
-```js
-import AuthnId from "@authn-id/browser";
-```
-
-#### Backend
-
-```js
-const apiUrl = "https://api.authn.id/v1";
 ```
